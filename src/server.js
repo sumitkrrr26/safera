@@ -4,6 +4,8 @@ require('dotenv').config();
 
 const authRoutes = require('./routes/authRoutes');
 const kycRoutes = require('./routes/kycRoutes');
+const profileRoutes = require('./routes/profileRoutes');
+const swipeRoutes = require('./routes/swipeRoutes');
 
 const app = express();
 
@@ -26,6 +28,8 @@ app.use((req, res, next) => {
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/kyc', kycRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/swipe', swipeRoutes);
 
 // Health check
 app.get('/health', (req, res) => {

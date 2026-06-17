@@ -6,6 +6,7 @@ const authRoutes = require('./routes/authRoutes');
 const kycRoutes = require('./routes/kycRoutes');
 const profileRoutes = require('./routes/profileRoutes');
 const swipeRoutes = require('./routes/swipeRoutes');
+const venueRoutes = require('./routes/venueRoutes');
 
 const app = express();
 
@@ -30,6 +31,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/kyc', kycRoutes);
 app.use('/api/profile', profileRoutes);
 app.use('/api/swipe', swipeRoutes);
+app.use('/api/venue', venueRoutes);
 
 // Health check
 app.get('/health', (req, res) => {
